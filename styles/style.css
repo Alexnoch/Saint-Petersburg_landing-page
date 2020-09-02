@@ -1,0 +1,645 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: Comfortaa;
+}
+
+.wraper {
+    margin: 0 auto;
+    max-width: 1280px;
+}
+@keyframes fonar_blesk {
+    0%{
+
+    }
+    100% {
+        transform: translate(120px);
+    }
+}
+
+@keyframes fonar_light {
+    0%{
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.header_nav {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+}
+
+.logo {
+    height: 86px;
+    width: 150px;
+    background: url(../images/logo_myspb_200x150.png) center center / cover no-repeat;
+    transform: rotate(-15deg);
+}
+
+.nav {
+    padding: 10px;
+}
+
+.nav a {
+    color:rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    margin: 0 10px;
+    position: relative;
+}
+
+/* Подчеркивания для навигации */
+
+.nav a:not(.logo .menu-btn .menu-btn-closed):before {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 0%;
+    left: 50%;
+    bottom: -3px;
+    
+    background: rgba(223, 251, 74, 0.33);
+}
+.nav a:hover:before {
+    width: 100%;
+    left: 0;
+    transition: 0.7s all;
+}
+
+.menu-btn{
+    background-image: url(../images/menu.png);
+   /*  background-position: center/center; */
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding:20px;
+    display:none;
+    opacity: 99;
+}
+
+.menu-btn-closed{
+    background-image: url(../images/close-button.png);
+    /* background-position: center/center; */
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding:20px;
+    display:none;
+    opacity: 99;
+}
+
+/* верхний ТОР блок с картинкой */
+
+.block_top {
+    background: url(../images/bridg.jpg) center center / cover no-repeat ;
+    height: 600px;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    align-items: center;
+    
+}
+
+.block_top h1 {
+    color:rgba(255, 255, 255, 0.75);
+    font-size: 40px;
+    align-items: center;
+    margin-top: 160px;
+}
+
+.block_top p {
+    color:rgba(255, 255, 255, 0.75);
+    font-size: 26px;
+}
+
+.block_top_button {
+    position: absolute;
+    width: 200px;
+    color:black;
+    padding: 10px 50px;
+    background-color: rgba(255, 235, 0, 0.58);
+    border-radius: 15px;
+    border: 1px solid rgb(223, 247, 27);
+    font-size: 18px;
+    text-decoration: none;
+    left: 0;
+    right: 0;
+    margin: 50px auto;
+
+}
+/* далее Блок банера */
+
+.block_baner {
+    padding: 30px;
+    text-align: center;  
+}
+
+.block_baner h2 {
+    color:rgb(45, 186, 255);
+}
+
+.fonar {
+    width: 66px;
+    height: 60px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background: url(../images/fonar.png) center center /cover no-repeat;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Анимация для фонаря перелив */
+/* .fonar:before {
+    animation: fonar_blesk 5s infinite;
+    content: "";
+    background: url(../images/blesk_fonar.png) center center /cover no-repeat;
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    left: -80px;
+} */
+
+/* Анимация для фонаря блеск */
+.fonar:before {
+    animation: fonar_light 3s infinite;
+    content: "";
+    background: url(../images/fonar_light.png) center center /cover no-repeat;
+    position: absolute;
+    height: 60px;
+    width: 66px;
+    left: 0px;
+    
+}
+
+.baner_line {
+    width: 20%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-bottom: 2px solid orange;
+    padding-top: 10px; 
+}
+
+/* .block_baner_line {
+    width: 20%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-bottom: 2px solid orange;
+    padding-top: 10px;
+} */
+
+.block_baner p {
+    font-size: 18px;
+    color: rgb(119, 114, 114);
+    padding-top: 10px;
+}
+
+/* Далее Блок услуги (флекс контейнер) */
+
+.block_uslugi_flex_header {
+    display: flex;
+    flex-wrap: wrap;
+    /* margin: 0 30px; */
+    padding: 30px;
+}
+
+.block_uslugi_flex {
+    /* border: 2px solid rgb(71, 71, 71); */
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    width: 50%;
+    box-sizing: border-box;
+}
+.block_uslugi_flex h3 {
+    color: rgb(71, 71, 71);
+}
+
+.block_uslugi_flex p {
+    color: rgb(119, 114, 114);
+    padding: 15px 0;
+}
+
+.block_uslugi_txt {
+    width: 75%;
+    box-sizing: border-box;
+}
+
+.block_uslugi_marsh {
+    width: 25%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background: url(../images/map_4.png) center center / cover no-repeat ;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+.block_uslugi_exkur {
+    width: 25%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background: url(../images/kryshi_2a.jpg) center center / cover no-repeat ;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+.block_uslugi_znakom {
+    width: 25%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background: url(../images/znakomstva.jpg) center center / cover no-repeat;
+    box-sizing: border-box;
+}
+.block_uslugi_suvenir {
+    width: 25%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background: url(../images/magnit__sankt-peterburg.jpg) center center / cover no-repeat;
+    box-sizing: border-box;
+}
+.block_uslugi_foto {
+    width: 25%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 100px;
+    width: 100px;
+    background: url(../images/photographer2.jpg) center center / cover no-repeat ;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+.block_uslugi_vpechat {
+    width: 25%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 100px;
+    width: 100px;
+    background: url(../images/hepypeople_3.jpg) center center / cover no-repeat ;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+/* блок о нас flex контейнер */
+
+.block_onas {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.block_onas_flex_1 {
+    width: 50%;
+    box-sizing: border-box;
+    background: url(../images/happy-people.jpg) center center / cover no-repeat;
+}
+
+.block_onas_flex_2 {
+    width: 50%;
+    box-sizing: border-box;
+    background: orange;
+    
+    
+}
+.block_onas_flex_2 h3 {
+    font-size: 18px;
+    color: antiquewhite;
+    width: 50%;
+    margin: 50px 150px 10px 50px;
+    box-sizing: border-box;
+}
+.block_onas_flex_2 p {
+    color: antiquewhite;
+    margin: 50px 150px 50px 50px;
+    box-sizing: border-box;
+    
+}
+.block_onas_button {
+    
+    display: block;
+    width: 200px;
+    color: antiquewhite;
+    padding: 10px 20px;
+    margin: 20px 100px;
+    background-color: rgb(234, 160, 131);
+    border-radius: 5px;
+    border: 1px solid rgb(223, 247, 27);
+    font-size: 18px;
+    text-decoration: none;
+}
+/* Блок с фотографиями Flex контейнер */
+
+.block_foto_header {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.block_foto_1 {
+    box-sizing: border-box;
+    height: 300px;
+    width: 25%;
+    background: url(../images/isaakievskiy_sobor_2.jpg) center center / cover no-repeat;
+}
+.block_foto_2 {
+    height: 300px;
+    width: 25%;
+    background: url(../images/Russia_St._Petersburg.jpg) center center / cover no-repeat;
+}
+.block_foto_3 {
+    height: 300px;
+    width: 25%;
+    background: url(../images/spb_spas_na_krovi.jpg) center center / cover no-repeat;
+}
+.block_foto_4 {
+    height: 300px;
+    width: 25%;
+    background: url(../images/spb_usupovskiy.jpg) center center / cover no-repeat;
+}
+.block_foto_5 {
+    height: 300px;
+    width: 25%;
+    background: url(../images/spb_water.jpg) center center / cover no-repeat;
+}
+.block_foto_6 {
+    height: 300px;
+    width: 25%;
+    background: url(../images/Petergof-1.jpg) center center / cover no-repeat;
+}
+.block_foto_7 {
+    height: 300px;
+    width: 25%;
+    background: url(../images/spb_kazanskiy_sobor_night.jpg) center center / cover no-repeat;
+}
+.block_foto_8 {
+    height: 300px;
+    width: 25%;
+    background: url(../images/spit_of_vasilievsky_island.jpg) center center / cover no-repeat;
+}
+
+ /* Блок с отзывами Flex контейнер */
+
+.block_otzyv_header {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.block_otzyv {
+    box-sizing: border-box;
+    width: 50%;
+    /* text-align: center; */
+        
+}
+
+.block_otzyv_header p {
+    
+    margin: 10px 75px;
+    background:rgb(236, 236, 236);
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.block_otzyv_l_foto {
+    height: 60px;
+    width: 50px;
+    border-radius: 0 13px 0 15px;
+    display: inline-block;
+    margin-left: 75px;
+    background: url(../images/gi.jpg)  center center / cover no-repeat;
+}
+.block_otzyv_r_foto {
+    height: 60px;
+    width: 50px;
+    border-radius: 0 13px 0 15px;
+    display: inline-block;
+    margin-left: 75px;
+    background: url(../images/km.jpeg)  center center / cover no-repeat;
+}
+ 
+
+/* Код переходов между блоками */
+
+.spb_fon {
+    background: url(../images/spb_org.png)  center center / contain;
+    height: 45px;
+    width: 100%;
+    filter: opacity(0.5);
+}
+/* .spb_fon_bridge {
+    background: url(../images/spb_original_bridge.png)  center center / contain;
+    height: 45px;
+    width: 100%;
+    filter: opacity(0.5);
+} */
+
+/* блок банер 2 */
+
+.bacground_block_baner_2 {
+    background:rgb(236, 236, 236); 
+}
+
+.block_baner_2 {
+    padding: 30px;
+    text-align: center;
+    background:rgb(236, 236, 236);
+}
+
+.block_baner_2 h2 {
+    color:rgb(45, 186, 255);
+
+}
+
+.baner_2_line {
+    width: 20%;
+    left: 0;
+    right: 0;
+    margin: 20px auto;
+    border-bottom: 2px solid orange
+}
+
+.block_baner_2 p {
+    font-size: 18px;
+    margin-top: 15px;
+    color: rgb(119, 114, 114);
+}
+
+/* Блок формы напишите нам */
+
+.form_question {
+    display: flex;
+    flex-wrap: wrap;
+    background: rgb(236, 236, 236); 
+    padding: 0 10px 20px;;
+
+}
+.form_question_cont {
+    width: 50%;
+    padding: 0 50px 0 50px;
+    box-sizing: border-box;
+
+}
+[type="text"], [type="number"], [type="email"], [type="submit"], textarea {
+    border: 2px solid orange;
+    padding: 7px 5px;
+    width: 100%;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+textarea {
+    height: 118px;
+}
+
+/* далее Футер  */
+
+.bacground_futer_header {
+    background: grey;
+}
+
+.futer_header {
+    background: grey;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.futer_logo {
+    display: block;
+    height: 70px;
+    width: 120px;
+    background: url(../images/logo_myspb_200x150.png) center center / cover no-repeat;
+}
+
+.futer {
+    width: 33.33%;
+    padding: 20px 50px;
+    box-sizing: border-box;
+}
+
+.flex_center {
+    margin: 0 50px 0 50px;
+}
+
+
+.futer h3 {
+    color: rgb(248, 243, 236);
+}
+
+.futer p {
+    color: antiquewhite;
+    padding-top: 10px;
+    font-size: 14px;
+    position: relative;
+}
+
+.futer a {
+    color: rgb(10, 214, 241);
+    font-size: 14px;
+}
+
+.futer [class="ico_mail"]:after {
+    content: "";
+    position: absolute;
+    left: -25px;
+    height: 14px;
+    width: 20px;
+    background: url(../images/logo_mail.png) center center / cover no-repeat;
+}
+.futer [class="ico_location"]:after {
+    content: "";
+    position: absolute;
+    left: -25px;
+    height: 17px;
+    width: 17px;
+    background: url(../images/location.png) center center / cover no-repeat;
+}
+.futer [class="ico_tel"]:after {
+    content: "";
+    position: absolute;
+    left: -23px;
+    height: 17px;
+    width: 17px;
+    background: url(../images/telef.png) center center / cover no-repeat;
+}
+
+/* далее дно Футера  */
+
+.futer_bottom_bacground {
+    background: black;
+}
+
+.futer_bottom {
+    background: black;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    font-size: 12px;
+}
+.futer_bottom p {
+    color: antiquewhite;
+}
+
+.social {
+    display: flex;
+    flex-wrap: wrap;
+    height: 24px;
+    width: 100px;
+}
+
+.social a {
+    height: 20px;
+    width: 20px;
+    margin: 0 2px;
+}
+/* Иконки для сайта */
+
+.social_vk {
+    background: url(../images/vk_logo_200px.png) center center / cover no-repeat;
+}
+.social_inst {
+    background: url(../images/instagram_logo_200px.png) center center / cover no-repeat;
+}
+.social_f {
+    background: url(../images/facebook_logo_200px.png) center center / cover no-repeat;
+}
+
+
+.scrol_up {
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    background: url(../images/up.svg) center center /cover no-repeat;
+    filter: opacity(0.5);
+}
+
+@media(max-width:600px){
+    .menu-btn{
+        display:block;
+    }
+    .nav>a:not(.menu-btn){
+        display:none;
+    }
+}
+
